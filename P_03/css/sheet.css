@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Heebo:900');
 /* === MEDIA QUERIES EXEMPLE ===*/
 
 * {
@@ -14,15 +15,17 @@ html, body {
 /* === TEXT ASPECT ===*/
 
 h1 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 60px;
+  line-height: 70px;
+  margin-bottom: 20px;
 }
 
 h2 {
   font-family:'Oswald', sans-serif;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 p {
@@ -34,15 +37,17 @@ p {
 #s1 {
   width:100%;
   height: 100%;
-  background:url(../images/glitch.mo) no-repeat fixed center center;
   background-size: cover;
   display: flex;
   justify-content: left;
   align-items: center;
 }
 
+
+
 #s1 hgroup {
-  width: 700px;
+  top: 300px;
+  width: 900px;
   height: auto;
   position: fixed;
   left: 150px;
@@ -59,7 +64,7 @@ p {
 
 #s2 {
   width:100%;
-  height: auto;
+  height: 25%;
   background: #ff4747;
   display: flex;
   justify-content: left;
@@ -72,8 +77,8 @@ p {
   position: relative;
   margin-top: 50px;
   text-align: right;
-  top: 100px;
-  right:-350px;
+  top: 300px;
+  right:-900px;
   color: #f2e6c8;
   line-height: normal;
   /*transition: all 2s;*/
@@ -81,44 +86,53 @@ p {
 }
 
 @keyframes entryRight {
-  from {opacity: 0; right:-800px;}
-  to {opacity: 1; right:-350px;}
+  from {opacity: 0; right:-1100px;}
+  to {opacity: 1; right:-900px;}
 }
 
 #s3 {
   background: #ff4747;
   width:100%;
-  height: 270%;
+  height: 280%;
   justify-content: left;
   align-items: center;
 }
 
 #s3 h2 {
-  font-size: 14px;
+  font-size: 18px;
   width: 700px;
   height: 0;
-  top: 270px;
-  left: 150px;
+  top: 700px;
+  left: 250px;
   position: relative;
   color: #f2e6c8;
   line-height: normal;
 }
 
-
-#s5 hgroup {
-  width: 700px;
-  position: relative;
-  top: 100px;
-  left: 150px;
-  color: #343d6f;
-  animation : entry 2s;
-}
-
 #s5 {
   width:100%;
-  height:520%;
+  height:540%;
   background: #efe84a;
 }
+
+
+#s5 hgroup {
+  top: 150px;
+  width: 900px;
+  position: relative;
+  left: 180px;
+  color: #343d6f;
+  line-height: normal;
+  /*transition: all 2s;*/
+  animation : entry2 2s;
+}
+
+@keyframes entry2 {
+  from {opacity: 0; left:0px;}
+  to {opacity: 1; left:180px;}
+}
+
+
 
 
 /* === INDEX IMAGES ASPECT ===*/
@@ -131,7 +145,7 @@ p {
 
 #s2 .cornerLeft {
   position: relative;
-  top: -75px;
+  top: 0px;
   left: 50px;
 }
 
@@ -152,15 +166,24 @@ p {
 #s2 .texture {
   float: left;
   position: fixed;
-  top: 200px;
+  top: 300px;
   left: 0px;
   opacity: 0.7;
+}
+
+#s5 .texture {
+  float: right;
+  position: fixed;
+  top: 280px;
+  right: 0px;
+  opacity: 1;
+
 }
 
 .cornerRight {
   float: right;
   position: fixed;
-  top: 525px;
+  top: 800px;
   right: 50px;
 }
 
@@ -229,6 +252,14 @@ a.two:hover {
   border-left: solid 5px;
   box-shadow: 0px 0px 40px rgba(0,0,0,.75);
 }
+#myVideo {
+  position:fixed;
+  right:0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 80%;
+  z-index: -1;
+}
 
 #s5 nav{
   font-family: 'Oswald', sans-serif;
@@ -258,18 +289,18 @@ a.two:hover {
 
 /* === GRAPHICS IMAGES ===*/
 #competences {
-  width: 800px;
+  width: 1000px;
   position: relative;
   align-items: center;
-  left: 50px;
-  top:300px;
+  top:500px;
   margin: 250px auto 0;
 }
 
 #competences h1 {
+
   text-align: center;
   color: #343d6f;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 #competences h2 {
@@ -280,7 +311,7 @@ a.two:hover {
 }
 #competences article .conteneur_progress_bar{
     width: 100%; /* Taille des barres */
-    height: 35px;
+    height: 45px;
     align-items: center;
     background-color: #000000;
     margin: auto;
@@ -288,7 +319,7 @@ a.two:hover {
 
 #competences article .conteneur_progress_bar .commun_progress_style{
     position:relative;
-    height:35px;
+    height:45px;
     align-items: center;
 }
 
@@ -351,48 +382,50 @@ a.two:hover {
 
 /* === GRAPHICS circle IMAGES ===*/
 .circleGraph {
-  width: 800px;
+  width: 1000px;
   position: relative;
   align-items: center;
-  top:300px;
-  margin: 250px;
+  top:400px;
+  margin: 250px auto 0;
 }
 
 .circleGraph h1{
   text-align: center;
   color: #343d6f;
+  margin-bottom: 50px;
 }
 
-.circleGraph h2{
-  margin-top: 10px;
-  text-align:left;
+.circleGraph  h2{
+  text-align: left;
   color: #343d6f;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .box-piesite h2{
-  text-align:left;
+  margin-top: 25px;
+  font-size: 20px;
+  text-align:center;
   color: #343d6f;
-  font-size: 14px;
+  margin-top: 50px;
 }
 
 .box-piesite {
     display: inline-block;
-    width: 1500px;
+    width: 1000px;
     text-align: center;
     font-size: 22px;
-    margin-top: 50px;
-
 }
 
 .piesite {
-    float:left;
-    vertical-align: top;
     position: relative;
     width: 1em;
     height: 1em;
     font-size: 10em;
-    margin-right: 100px;
-    margin-top: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 100px;
+
 }
 
 .piesite .percent {
@@ -432,20 +465,16 @@ a.two:hover {
 }
 
 li.design .piesite > #slice > .pie {
-    position: absolute;
-    display: block;
     border-color: #ff4747;
 }
 
 li.usability .piesite > #slice > .pie {
-  position: absolute;
-  display: block;
+
     border-color: #ff4747;
 }
 
 li.creativity .piesite > #slice > .pie {
-  position: absolute;
-  display: block;
+
   border-color: #ff4747;
 }
 
@@ -484,9 +513,10 @@ li.creativity .piesite > #slice > .pie {
 }
 
 .box-piesite ul {
+  display: flex;
     padding: 0;
     li {
-      display: block;
+
     }
 }
 
@@ -529,78 +559,78 @@ li.creativity .piesite > #slice > .pie {
 
 .facebook {
   position: absolute;
-  top: -150px;
+  top: 50px;
   left: 250px;
 }
 
 .instagram {
   position: absolute;
-  top: 270px;
-  left: 1000px;
+  top: 950px;
+  left: 1100px;
 }
 
 .twitter {
   position: absolute;
-  top:170px;
-  left: 860px;
+  top:500px;
+  left: 1600px;
 }
 
 .vimeo {
   position: absolute;
   top: 900px;
-  left: 950px;
+  left: 1400px;
 }
 
 .messenger {
   position: absolute;
-  top: 750px;
+  top: 1650px;
   left: 40px;
 }
 
 .youtube {
   position: absolute;
-  top: 850px;
-  left: 875px;
+  top: 2000px;
+  left: 1675px;
 }
 
 .google {
   position: absolute;
-  top: 650px;
+  top: 550px;
   left: 30px;
 }
 
 .pinterest {
   position: absolute;
-  top: 160px;
-  left: 400px;
+  top: 360px;
+  left: 1100px;
 }
 
 .whatapp {
   position: absolute;
-  top: 1200px;
-  left: 400px;
+  top: 2080px;
+  left: 1050px;
 }
 
 .tumblr {
   position: absolute;
-  top: 1500px;
-  left: 630px;
+  top: 1800px;
+  left: 1300px;
 }
 
 .snapchat {
   position: absolute;
-  top: 850px;
+  top: 1750px;
   left: 1000px;
 }
 
 
 /* === CHART BANDE ===*/
 .chartBarsWrap {
-  width: 800px;
+  width: 1000px;
   position: relative;
   align-items: center;
-  left: 50px;
-  top:300px;
+
+  top:400px;
   margin: 250px auto 0;
 }
 
@@ -608,12 +638,14 @@ li.creativity .piesite > #slice > .pie {
   text-transform: uppercase;
   text-align: center;
   color: #343d6f;
+  margin-bottom: 50px;
 }
 
 .chartBarsWrap h2{
   color: #343d6f;
   margin-top: 10px;
-  width:800px;
+  width:1000px;
+    margin-bottom: 100px;
 }
 .chartBars {
   position: relative;
@@ -743,11 +775,11 @@ li.creativity .piesite > #slice > .pie {
 
 /* ANIMATED BOX*/
 .bigpop {
-  width: 800px;
+  width: 1000px;
   position: relative;
   align-items: center;
   left: 50px;
-  top:200px;
+  top:500px;
   margin: 250px auto 0;
 }
 
@@ -764,12 +796,13 @@ li.creativity .piesite > #slice > .pie {
 
 .pop {
   align-items: center;
-  margin:0;
+  margin-top: 50px;
   padding:0;
   position: relative;
-  padding-left: 200px;
+    left:100px;
   top: 50px;
-  width: 550px;
+  height: 100px;
+  width: 800px;
   display:-webkit-box;
   -webkit-box-orient:vertical;
   -webkit-box-pack:center;
@@ -791,7 +824,8 @@ li.creativity .piesite > #slice > .pie {
 }
 
 .pop div { /* fond de la boite*/
-  width:550px;
+  height: 200px;
+  width:800px;
   background:#efe84a;
   border-radius:5px;
   -webkit-box-shadow:0 1px 3px rgba(0,0,0,.3);
@@ -803,7 +837,7 @@ p {
   text-align: center;
   height:0;
   padding:0 15px;
-  font-size: 14px;
+  font-size: 18px;
   overflow:hidden;
   -webkit-transition:height .4s ease-out, padding .4s ease-out;
   -moz-transition:height .4s ease-out, padding .4s ease-out;
@@ -823,12 +857,14 @@ p {
   color:#000000;
   text-align: center;
   font-family: 'Oswald', sans-serif;
-  font-size:14px;
+  font-size:16px;
+  padding-top: 10px;
 }
 a.three {
-  width:100%;
+
+  width:800px;
   display:block;
-  height:30px;
+  height:50px;
   line-height:30px;
   background:-webkit-gradient(
     linear, 0 0, 0 100%,
@@ -875,8 +911,8 @@ a.three:active {
   height:200px;
 }
 #contact:target + p {
-  margin-top: 20px;
-  height:180px;
+  margin-top: 40px;
+  height:160px;
 }
 #up:target + p {
   margin-top: 20px;
